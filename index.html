@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia das Mães - Celebre o Amor Materno</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="config.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Feliz Dia das Mães</h1>
+            <p class="hero-subtitle">Celebre o amor mais puro e especial do mundo</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('gifts')">Ver Presentes</button>
+                <button class="btn-secondary" onclick="scrollToSection('message')">Enviar Mensagem</button>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-hearts">
+                <span class="heart">❤️</span>
+                <span class="heart">💐</span>
+                <span class="heart">🌹</span>
+                <span class="heart">💕</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Por que o Dia das Mães é Especial?</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">🤱</div>
+                        <h3>Amor Incondicional</h3>
+                        <p>O amor de mãe não tem limites, é puro, eterno e incondicional.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💝</div>
+                        <h3>Cuidado e Dedicação</h3>
+                        <p>Dias e noites de cuidado, sempre pensando no bem-estar dos filhos.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌟</div>
+                        <h3>Inspiração Diária</h3>
+                        <p>Mães são nosso maior exemplo de força, coragem e superação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gifts" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Escolha Seu Presente Perfeito</h2>
+                
+                <!-- Opções de Produto -->
+                <div class="product-options">
+                    <div class="gift-item">
+                        <div class="gift-image-large">
+                            <img src="foto%20com%20valor%20alterado.jpg" alt="Cesta Dia das Mães">
+                        </div>
+                        <h3>Cesta Dia das Mães Especial</h3>
+                        <span class="gift-price-large">R$ 49,99</span>
+                        <button class="btn-primary btn-large" onclick="selectProduct('complete', 49.99)">Comprar Agora</button>
+                    </div>
+                    
+                                    </div>
+                
+                <div class="custom-basket-section">
+                    <h3 class="custom-basket-title">✨ Monte Sua Cesta Personalizada</h3>
+                    <div class="custom-items-grid">
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="19.99" data-name="Buquê de Rosas" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="buque%20de%20rosa.jpg" alt="Buquê de Rosas">
+                                <div class="custom-item-info">
+                                    <h4>Buquê de Rosas</h4>
+                                    <span class="custom-item-price">R$ 19,99</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="17.99" data-name="Urso de Pelúcia" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="urso%20de%20pelucia.jpg" alt="Urso de Pelúcia">
+                                <div class="custom-item-info">
+                                    <h4>Urso de Pelúcia</h4>
+                                    <span class="custom-item-price">R$ 17,99</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="14.99" data-name="Pão e Croissant" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="pão%20e%20croissant.jpg" alt="Pão e Croissant">
+                                <div class="custom-item-info">
+                                    <h4>Pão e Croissant</h4>
+                                    <span class="custom-item-price">R$ 14,99</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="11.99" data-name="Suco de Laranja" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="suco%20de%20laranja.jpg" alt="Suco de Laranja">
+                                <div class="custom-item-info">
+                                    <h4>Suco de Laranja</h4>
+                                    <span class="custom-item-price">R$ 11,99</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="13.99" data-name="Iogurte com Granola" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="iogurte%20com%20granola.jpg" alt="Iogurte com Granola">
+                                <div class="custom-item-info">
+                                    <h4>Iogurte com Granola</h4>
+                                    <span class="custom-item-price">R$ 13,99</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="16.99" data-name="Frutas Frescas" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="Frutas%20frescas.jpg" alt="Frutas Frescas">
+                                <div class="custom-item-info">
+                                    <h4>Frutas Frescas</h4>
+                                    <span class="custom-item-price">R$ 16,99</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="18.99" data-name="Queijo com Geleia" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="queijo%20com%20geleia.jpg" alt="Queijo com Geleia">
+                                <div class="custom-item-info">
+                                    <h4>Queijo com Geleia</h4>
+                                    <span class="custom-item-price">R$ 18,99</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="15.99" data-name="Caneca Personalizada" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="caneca%20personalizada.jpg" alt="Caneca Personalizada">
+                                <div class="custom-item-info">
+                                    <h4>Caneca Personalizada</h4>
+                                    <span class="custom-item-price">R$ 15,99</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="custom-item">
+                            <input type="checkbox" class="custom-checkbox" data-price="14.99" data-name="Bolo Caseiro" onchange="updateCustomTotal()">
+                            <div class="custom-item-content">
+                                <img src="bolo%20caseiro.jpg" alt="Bolo Caseiro">
+                                <div class="custom-item-info">
+                                    <h4>Bolo Caseiro</h4>
+                                    <span class="custom-item-price">R$ 14,99</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="custom-total-section">
+                        <div class="custom-total-box">
+                            <div class="total-row">
+                                <span>Total dos Itens Selecionados:</span>
+                                <span id="custom-total" class="custom-total-price">R$ 0,00</span>
+                            </div>
+                            <div class="complete-basket-offer" id="complete-offer" style="display: none;">
+                                <div class="offer-badge">🏷️ OFERTA ESPECIAL</div>
+                                <p>Cesta Completa com <strong>TODOS</strong> os itens:</p>
+                                <div class="offer-price-row">
+                                    <span class="original-price">R$ 144,91</span>
+                                    <span class="offer-price">R$ 49,99</span>
+                                </div>
+                                <p class="savings-text">Você economiza <strong>R$ 94,92</strong>! 💰</p>
+                            </div>
+                        </div>
+                        <button class="btn-primary btn-large" onclick="buyCustomBasket()">Comprar Cesta Personalizada</button>
+                    </div>
+                </div>
+
+                <!-- Informações sobre entrega -->
+                <div class="delivery-info">
+                    <div class="delivery-item">
+                        <div class="delivery-icon">📦</div>
+                        <h4>Entrega Rastreável</h4>
+                        <p>Acompanhe seu pedido em tempo real pelo código de rastreio</p>
+                    </div>
+                    <div class="delivery-item">
+                        <div class="delivery-icon">🚚</div>
+                        <h4>Entrega Rápida</h4>
+                        <p>Receba em até 3 dias úteis em todo o Brasil</p>
+                    </div>
+                    <div class="delivery-item">
+                        <div class="delivery-icon">🎁</div>
+                        <h4>Embalagem Especial</h4>
+                        <p>Presente perfeito, já embalado para surpreender</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Avaliações -->
+        <section id="reviews" class="section">
+            <div class="container">
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Minha mãe amou a cesta! Produtos de ótima qualidade e embalagem linda. Super recomendo!"</p>
+                        <div class="review-author">- Maria Silva</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Entrega super rápida e o produto veio exatamente como nas fotos. Minha mãe ficou emocionada!"</p>
+                        <div class="review-author">- João Santos</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Excelente custo-benefício! Os chocolates Lindor são incríveis e a apresentação é impecável."</p>
+                        <div class="review-author">- Ana Oliveira</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Comprei no último minuto e mesmo assim consegui receber a tempo. O rastreamento funcionou perfeitamente!"</p>
+                        <div class="review-author">- Carlos Costa</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"A melhor cesta de Dia das Mães que já comprei! Minha mãe disse que foi o melhor presente que ganhou."</p>
+                        <div class="review-author">- Fernanda Lima</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Atendimento excelente e produto de primeira. Já indiquei para todos os meus amigos!"</p>
+                        <div class="review-author">- Roberto Mendes</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="message" class="section">
+            <div class="container">
+                <h2 class="section-title">Envie sua Mensagem</h2>
+                <div class="message-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="motherName" placeholder="Nome da sua mãe" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Escreva uma mensagem especial para sua mãe..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Enviar Mensagem ❤️</button>
+                    </form>
+                    <div id="messageSent" class="message-success" style="display: none;">
+                        <h3>Mensagem enviada com sucesso!</h3>
+                        <p>Sua mãe vai adorar receber este carinho.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="countdown" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Contagem Regressiva</h2>
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Dias</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutos</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="payment" class="section">
+        <div class="container">
+            <h2 class="section-title">Finalizar Pedido</h2>
+            <div class="payment-form">
+                <form id="orderForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Nome Completo *</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cpf">CPF *</label>
+                            <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthDate">Data de Nascimento *</label>
+                            <input type="date" id="birthDate" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cep">CEP *</label>
+                            <input type="text" id="cep" placeholder="00000-000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="houseNumber">Número *</label>
+                            <input type="text" id="houseNumber" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 2;">
+                            <label for="street">Rua *</label>
+                            <input type="text" id="street" placeholder="Digite o CEP para preencher automaticamente" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="neighborhood">Bairro</label>
+                            <input type="text" id="neighborhood" placeholder="Digite o CEP para preencher">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="state">Estado *</label>
+                            <select id="state" required>
+                                <option value="">Selecione...</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Cidade *</label>
+                            <input type="text" id="city" required>
+                        </div>
+                    </div>
+                    <div class="payment-methods">
+                        <h3>Forma de Pagamento *</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="pix" required checked>
+                                <span class="payment-icon">📱</span>
+                                <span class="payment-text">PIX</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Campos para PIX -->
+                    <div id="pixFields" class="pix-fields" style="display: block;">
+                        <div class="pix-info">
+                            <h4>Pagamento via DentPeg 💚</h4>
+                            <p>Pague com PIX e o valor vai direto para DePix!</p>
+                            <div class="dentpeg-checkout">
+                                <p class="dentpeg-instructions">Clique no botão abaixo para acessar nosso checkout de forma segura, informe o valor total da sua compra e finalize o pagamento via PIX.</p>
+                                <a id="dentpegLink" href="#" target="_blank" class="btn-dentpeg">
+                                    <span>💚</span> Pagar com DentPeg (PIX/DePix)
+                                </a>
+                                <div class="pix-benefits">
+                                    <div class="benefit-item">
+                                        <span>⚡</span>
+                                        <span>Pagamento instantâneo</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <span>🔒</span>
+                                        <span>100% seguro via DentPeg</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <span>💰</span>
+                                        <span>Sem taxas adicionais</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h3>Resumo do Pedido</h3>
+                        <div class="summary-item">
+                            <span id="summaryProductName">Selecione um produto</span>
+                            <span id="summaryProductPrice">R$ 0,00</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total:</span>
+                            <span id="summaryTotalPrice">R$ 0,00</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Finalizar Compra 💳</button>
+                </form>
+                <div id="orderSuccess" class="order-success" style="display: none;">
+                    <h3>Pedido Confirmado!</h3>
+                    <p>Obrigado pela sua compra! Você receberá um e-mail com os detalhes do pedido.</p>
+                    <p>Número do pedido: #<span id="orderNumber"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para exibir imagem do produto -->
+    <div id="productModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-image">
+                <img src="cesta-cafe-manha.jpg.jpg" alt="Cesta Café da Manhã + Chocolates">
+            </div>
+            <div class="modal-info">
+                <h2>Cesta Café da Manhã + Chocolates</h2>
+                <p>Café da manhã com produtos selecionados e Chocolates Lindor ao Leite. Embalagem especial, pronta para presentear!</p>
+                <div class="modal-price">
+                    <span class="price-label">Preço:</span>
+                    <span class="price-value">R$ 24,99</span>
+                </div>
+                <button class="btn-primary" onclick="scrollToSection('payment')">Comprar Agora</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Pagamento DentPeg -->
+    <div id="pixModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closePixModal()">&times;</span>
+            <div class="pix-modal-content">
+                <h2>💚 Pagamento via PIX</h2>
+                <p>Finalize seu pagamento de forma segura</p>
+                
+                <div class="dentpeg-warning-box">
+                    <span class="warning-icon">⚠️</span>
+                    <div class="warning-text">
+                        <strong>IMPORTANTE:</strong> Informe exatamente o valor abaixo no checkout do DentPeg para confirmarmos seu pagamento!
+                    </div>
+                </div>
+                
+                <div class="dentpeg-modal-box">
+                    <div class="dentpeg-amount-box">
+                        <p class="dentpeg-label">Valor total do seu pedido:</p>
+                        <p class="dentpeg-amount" id="modalDentpegAmount">R$ 49,99</p>
+                    </div>
+                    <a id="modalDentpegLink" href="#" target="_blank" class="btn-dentpeg btn-dentpeg-large">
+                        <span>💚</span> Ir para Pagamento no DentPeg
+                    </a>
+                    <p class="dentpeg-note"><strong>Importante:</strong> No checkout, informe exatamente o valor acima para que possamos identificar seu pagamento!</p>
+                </div>
+                <div class="pix-instructions">
+                    <h4>Passo a passo:</h4>
+                    <ol>
+                        <li>Clique no botão verde acima</li>
+                        <li><strong>Informe o valor <span id="instructionAmount">R$ 49,99</span></strong> no campo valor</li>
+                        <li>Escaneie o QR Code PIX ou copie o código</li>
+                        <li>Finalize o pagamento no seu banco</li>
+                        <li>Volte aqui e clique em "Enviar Comprovante"</li>
+                    </ol>
+                </div>
+                
+                <div class="dentpeg-receipt-section">
+                    <h3>📱 Já efetuou o pagamento?</h3>
+                    <p>Envie o comprovante com seu <strong>nome completo</strong> para confirmarmos seu pedido:</p>
+                    <button class="btn-whatsapp btn-full" onclick="sendReceiptWhatsApp()">
+                        <span>📲</span> Enviar Comprovante pelo WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de urgência e confiança -->
+    <div class="trust-bar">
+        <div class="trust-item">
+            <span class="trust-icon">🔒</span>
+            <span>Compra 100% Segura</span>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">✅</span>
+            <span>Produtos Verificados</span>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">🚚</span>
+            <span>Entrega Garantida</span>
+        </div>
+    </div>
+
+    <!-- Contador de pessoas online e ofertas -->
+    <div class="urgency-bar">
+        <div class="urgency-item">
+            <span class="online-count">
+                <span class="online-number" id="onlineCount">47</span> pessoas online
+            </span>
+        </div>
+        <div class="urgency-item">
+            <span class="free-shipping">
+                🚚 Frete GRÁTIS para as <span class="free-shipping-count" id="freeShippingCount">13</span> primeiras compras!
+            </span>
+        </div>
+    </div>
+
+    <!-- Notificações de compras em tempo real -->
+    <div id="purchaseNotifications" class="purchase-notifications"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Dia das Mães - Celebre o Amor Materno</p>
+            <p>Feito com ❤️ para todas as mães do mundo</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp Suporte -->
+    <a href="#" id="whatsapp-float-btn" target="_blank" class="whatsapp-float" title="Fale conosco pelo WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="whatsapp-icon">
+            <path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.2-16.3-14.5-27.3-32.5-30.5-38-3.2-5.5-.4-8.5 2.4-11.3 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.2 3.7-5.5 5.6-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.6 9.1 31.6 11.6 13.3 4.2 25.3 3.6 34.9 2.2 10.6-1.4 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5.1-3.9-10.6-6.6z"/>
+        </svg>
+        <span class="whatsapp-tooltip">Dúvidas? Fale conosco!</span>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+    // Injeta links sensíveis dinamicamente a partir do CONFIG (nunca hardcoded no HTML)
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.CONFIG) {
+            // Botão flutuante WhatsApp
+            var waBtn = document.getElementById('whatsapp-float-btn');
+            if (waBtn) {
+                var msg = encodeURIComponent('Olá! Tenho uma dúvida sobre a Cesta Dia das Mães, pode me ajudar?');
+                waBtn.href = 'https://wa.me/55' + window.CONFIG.whatsappNumber + '?text=' + msg;
+            }
+            // Links DentPeg
+            var dentpegLink = document.getElementById('dentpegLink');
+            if (dentpegLink) dentpegLink.href = window.CONFIG.dentpegCheckoutUrl;
+            var modalLink = document.getElementById('modalDentpegLink');
+            if (modalLink) modalLink.href = window.CONFIG.dentpegCheckoutUrl;
+        }
+    });
+    </script>
+</body>
+</html>

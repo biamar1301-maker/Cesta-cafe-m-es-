@@ -1,0 +1,8 @@
+{
+  "name": "cesta-dia-das-maes",
+  "version": "1.0.0",
+  "description": "Site Cesta Dia das Mães",
+  "scripts": {
+    "start": "python -m http.server 8000"
+  }
+}
